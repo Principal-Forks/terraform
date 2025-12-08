@@ -4,87 +4,87 @@ name: "Terraform Core Architecture Library"
 nodeComponents:
   # CLI Layer
   cli_entry:
-    color: "1"
+    color: "#3B82F6"
     icon: "Terminal"
   command:
-    color: "1"
+    color: "#60A5FA"
     icon: "Command"
 
   # Core Engine
   context:
-    color: "2"
+    color: "#10B981"
     icon: "Cpu"
   dag:
-    color: "2"
+    color: "#34D399"
     icon: "Network"
 
   # Configuration & Language
   config_loader:
-    color: "3"
+    color: "#F59E0B"
     icon: "FileCode"
   lang_evaluator:
-    color: "3"
+    color: "#FBBF24"
     icon: "Calculator"
 
   # State Management
   state:
-    color: "4"
+    color: "#06B6D4"
     icon: "Database"
   backend:
-    color: "4"
+    color: "#22D3EE"
     icon: "HardDrive"
 
   # Plans
   plan:
-    color: "5"
+    color: "#8B5CF6"
     icon: "FileText"
 
   # Plugin System
   provider_interface:
-    color: "6"
+    color: "#EC4899"
     icon: "Plug"
   provider_plugin:
-    color: "6"
+    color: "#F472B6"
     icon: "Package"
   provisioner:
-    color: "6"
+    color: "#FB7185"
     icon: "Wrench"
 
   # External Systems
   registry:
-    color: "purple"
+    color: "#A855F7"
     icon: "Cloud"
   cloud:
-    color: "purple"
+    color: "#C084FC"
     icon: "CloudCog"
 
   # Supporting Systems
   diagnostics:
-    color: "orange"
+    color: "#F97316"
     icon: "AlertCircle"
   logging:
-    color: "orange"
+    color: "#FB923C"
     icon: "FileText"
 
 edgeComponents:
   orchestrates:
     style: "solid"
-    color: "1"
+    color: "#3B82F6"
   uses:
     style: "solid"
-    color: "4"
+    color: "#06B6D4"
   implements:
     style: "dashed"
-    color: "6"
+    color: "#EC4899"
   communicates:
     style: "dotted"
-    color: "2"
+    color: "#10B981"
   stores:
     style: "solid"
-    color: "4"
+    color: "#0891B2"
   evaluates:
     style: "dashed"
-    color: "3"
+    color: "#F59E0B"
   reports:
     style: "dotted"
-    color: "orange"
+    color: "#F97316"

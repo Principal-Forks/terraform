@@ -13,10 +13,11 @@
       "id": "main",
       "type": "text",
       "text": "main.go\nCLI Entry Point",
-      "x": 100,
-      "y": 50,
+      "x": 118,
+      "y": -376,
       "width": 200,
       "height": 100,
+      "color": "#3B82F6",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -27,10 +28,11 @@
       "id": "commands",
       "type": "text",
       "text": "command/\nCommand Implementations",
-      "x": 100,
-      "y": 150,
+      "x": 118,
+      "y": -217,
       "width": 200,
       "height": 100,
+      "color": "#60A5FA",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -41,10 +43,11 @@
       "id": "context",
       "type": "text",
       "text": "terraform/context.go\nCore Orchestrator",
-      "x": 100,
-      "y": 300,
+      "x": -315,
+      "y": 115,
       "width": 200,
       "height": 100,
+      "color": "#10B981",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -55,10 +58,11 @@
       "id": "config_loader",
       "type": "text",
       "text": "configs/\nHCL Parser",
-      "x": 300,
-      "y": 200,
+      "x": -454,
+      "y": 409,
       "width": 200,
       "height": 100,
+      "color": "#F59E0B",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -73,6 +77,7 @@
       "y": 300,
       "width": 200,
       "height": 100,
+      "color": "#FBBF24",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -83,10 +88,11 @@
       "id": "dag",
       "type": "text",
       "text": "dag/\nDependency Graph",
-      "x": 100,
-      "y": 450,
+      "x": 15,
+      "y": 296,
       "width": 200,
       "height": 100,
+      "color": "#34D399",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -97,10 +103,11 @@
       "id": "state",
       "type": "text",
       "text": "states/\nState Management",
-      "x": -100,
-      "y": 300,
+      "x": -189,
+      "y": 407,
       "width": 200,
       "height": 100,
+      "color": "#06B6D4",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -111,10 +118,11 @@
       "id": "backend",
       "type": "text",
       "text": "backend/\nStorage Abstraction",
-      "x": -100,
-      "y": 450,
+      "x": -189,
+      "y": 544,
       "width": 200,
       "height": 100,
+      "color": "#22D3EE",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -125,10 +133,11 @@
       "id": "plan",
       "type": "text",
       "text": "plans/\nExecution Plans",
-      "x": -100,
-      "y": 150,
+      "x": -454,
+      "y": -28,
       "width": 200,
       "height": 100,
+      "color": "#8B5CF6",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -143,6 +152,7 @@
       "y": 600,
       "width": 200,
       "height": 100,
+      "color": "#EC4899",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -153,10 +163,11 @@
       "id": "aws_provider",
       "type": "text",
       "text": "AWS Provider\n(External Plugin)",
-      "x": -50,
-      "y": 750,
+      "x": -134,
+      "y": 818,
       "width": 200,
       "height": 100,
+      "color": "#F472B6",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -167,10 +178,11 @@
       "id": "azure_provider",
       "type": "text",
       "text": "Azure Provider\n(External Plugin)",
-      "x": 150,
-      "y": 750,
+      "x": 104,
+      "y": 817,
       "width": 200,
       "height": 100,
+      "color": "#F472B6",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -181,10 +193,11 @@
       "id": "other_provider",
       "type": "text",
       "text": "Other Providers\n(External Plugins)",
-      "x": 350,
-      "y": 750,
+      "x": 345,
+      "y": 814,
       "width": 200,
       "height": 100,
+      "color": "#F472B6",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -195,10 +208,11 @@
       "id": "provisioner",
       "type": "text",
       "text": "provisioners/\nProvisioner Interface",
-      "x": 300,
-      "y": 600,
+      "x": 370,
+      "y": 592,
       "width": 200,
       "height": 100,
+      "color": "#FB7185",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -209,10 +223,11 @@
       "id": "registry",
       "type": "text",
       "text": "registry/\nTerraform Registry",
-      "x": 500,
-      "y": 200,
+      "x": 617,
+      "y": -38,
       "width": 200,
       "height": 100,
+      "color": "#A855F7",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -223,10 +238,11 @@
       "id": "cloud",
       "type": "text",
       "text": "cloud/\nTerraform Cloud",
-      "x": 500,
-      "y": 350,
+      "x": 358,
+      "y": 94,
       "width": 200,
       "height": 100,
+      "color": "#C084FC",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -237,10 +253,11 @@
       "id": "diagnostics",
       "type": "text",
       "text": "tfdiags/\nDiagnostics",
-      "x": -300,
-      "y": 200,
+      "x": -318,
+      "y": 713,
       "width": 200,
       "height": 100,
+      "color": "#F97316",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -251,10 +268,11 @@
       "id": "logging",
       "type": "text",
       "text": "logging/\nStructured Logs",
-      "x": -300,
-      "y": 350,
+      "x": -643,
+      "y": 295,
       "width": 200,
       "height": 100,
+      "color": "#FB923C",
       "vv": {
         "nodeType": "component",
         "shape": "rectangle",
@@ -267,6 +285,7 @@
       "id": "edge_0",
       "fromNode": "main",
       "toNode": "commands",
+      "color": "#3B82F6",
       "vv": {
         "component": "orchestrates",
         "label": "routes"
@@ -276,6 +295,7 @@
       "id": "edge_1",
       "fromNode": "commands",
       "toNode": "context",
+      "color": "#3B82F6",
       "vv": {
         "component": "orchestrates",
         "label": "creates"
@@ -285,6 +305,7 @@
       "id": "edge_2",
       "fromNode": "commands",
       "toNode": "plan",
+      "color": "#06B6D4",
       "vv": {
         "component": "uses",
         "label": "reads/writes"
@@ -294,6 +315,7 @@
       "id": "edge_3",
       "fromNode": "context",
       "toNode": "config_loader",
+      "color": "#06B6D4",
       "vv": {
         "component": "uses",
         "label": "parses HCL"
@@ -303,6 +325,7 @@
       "id": "edge_4",
       "fromNode": "context",
       "toNode": "lang",
+      "color": "#F59E0B",
       "vv": {
         "component": "evaluates",
         "label": "evaluates"
@@ -312,6 +335,7 @@
       "id": "edge_5",
       "fromNode": "context",
       "toNode": "state",
+      "color": "#06B6D4",
       "vv": {
         "component": "uses",
         "label": "manages"
@@ -321,6 +345,7 @@
       "id": "edge_6",
       "fromNode": "context",
       "toNode": "dag",
+      "color": "#3B82F6",
       "vv": {
         "component": "orchestrates",
         "label": "builds & walks"
@@ -330,6 +355,7 @@
       "id": "edge_7",
       "fromNode": "state",
       "toNode": "backend",
+      "color": "#0891B2",
       "vv": {
         "component": "stores",
         "label": "persists via"
@@ -339,6 +365,7 @@
       "id": "edge_8",
       "fromNode": "dag",
       "toNode": "provider_interface",
+      "color": "#3B82F6",
       "vv": {
         "component": "orchestrates",
         "label": "executes via"
@@ -348,6 +375,7 @@
       "id": "edge_9",
       "fromNode": "provider_interface",
       "toNode": "aws_provider",
+      "color": "#EC4899",
       "vv": {
         "component": "implements",
         "label": "gRPC"
@@ -357,6 +385,7 @@
       "id": "edge_10",
       "fromNode": "provider_interface",
       "toNode": "azure_provider",
+      "color": "#EC4899",
       "vv": {
         "component": "implements",
         "label": "gRPC"
@@ -366,6 +395,7 @@
       "id": "edge_11",
       "fromNode": "provider_interface",
       "toNode": "other_provider",
+      "color": "#EC4899",
       "vv": {
         "component": "implements",
         "label": "gRPC"
@@ -375,6 +405,7 @@
       "id": "edge_12",
       "fromNode": "dag",
       "toNode": "provisioner",
+      "color": "#3B82F6",
       "vv": {
         "component": "orchestrates",
         "label": "executes"
@@ -384,6 +415,7 @@
       "id": "edge_13",
       "fromNode": "commands",
       "toNode": "registry",
+      "color": "#10B981",
       "vv": {
         "component": "communicates",
         "label": "downloads from"
@@ -393,6 +425,7 @@
       "id": "edge_14",
       "fromNode": "commands",
       "toNode": "cloud",
+      "color": "#10B981",
       "vv": {
         "component": "communicates",
         "label": "syncs with"
@@ -402,6 +435,7 @@
       "id": "edge_15",
       "fromNode": "backend",
       "toNode": "cloud",
+      "color": "#0891B2",
       "vv": {
         "component": "stores",
         "label": "remote state"
@@ -411,6 +445,7 @@
       "id": "edge_16",
       "fromNode": "context",
       "toNode": "diagnostics",
+      "color": "#F97316",
       "vv": {
         "component": "reports",
         "label": "errors/warnings"
@@ -420,6 +455,7 @@
       "id": "edge_17",
       "fromNode": "context",
       "toNode": "logging",
+      "color": "#F97316",
       "vv": {
         "component": "reports",
         "label": "structured logs"
@@ -429,6 +465,7 @@
       "id": "edge_18",
       "fromNode": "config_loader",
       "toNode": "diagnostics",
+      "color": "#F97316",
       "vv": {
         "component": "reports",
         "label": "parse errors"
