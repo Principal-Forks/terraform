@@ -1,0 +1,438 @@
+{
+  "vv": {
+    "name": "Terraform Core Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "component": {
+        "shape": "rectangle"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "main",
+      "type": "text",
+      "text": "main.go\nCLI Entry Point",
+      "x": 100,
+      "y": 50,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "cli_entry"
+      }
+    },
+    {
+      "id": "commands",
+      "type": "text",
+      "text": "command/\nCommand Implementations",
+      "x": 100,
+      "y": 150,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "command"
+      }
+    },
+    {
+      "id": "context",
+      "type": "text",
+      "text": "terraform/context.go\nCore Orchestrator",
+      "x": 100,
+      "y": 300,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "context"
+      }
+    },
+    {
+      "id": "config_loader",
+      "type": "text",
+      "text": "configs/\nHCL Parser",
+      "x": 300,
+      "y": 200,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "config_loader"
+      }
+    },
+    {
+      "id": "lang",
+      "type": "text",
+      "text": "lang/\nExpression Evaluator",
+      "x": 300,
+      "y": 300,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "lang_evaluator"
+      }
+    },
+    {
+      "id": "dag",
+      "type": "text",
+      "text": "dag/\nDependency Graph",
+      "x": 100,
+      "y": 450,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "dag"
+      }
+    },
+    {
+      "id": "state",
+      "type": "text",
+      "text": "states/\nState Management",
+      "x": -100,
+      "y": 300,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "state"
+      }
+    },
+    {
+      "id": "backend",
+      "type": "text",
+      "text": "backend/\nStorage Abstraction",
+      "x": -100,
+      "y": 450,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "backend"
+      }
+    },
+    {
+      "id": "plan",
+      "type": "text",
+      "text": "plans/\nExecution Plans",
+      "x": -100,
+      "y": 150,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "plan"
+      }
+    },
+    {
+      "id": "provider_interface",
+      "type": "text",
+      "text": "providers/\nProvider Interface",
+      "x": 100,
+      "y": 600,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "provider_interface"
+      }
+    },
+    {
+      "id": "aws_provider",
+      "type": "text",
+      "text": "AWS Provider\n(External Plugin)",
+      "x": -50,
+      "y": 750,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "provider_plugin"
+      }
+    },
+    {
+      "id": "azure_provider",
+      "type": "text",
+      "text": "Azure Provider\n(External Plugin)",
+      "x": 150,
+      "y": 750,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "provider_plugin"
+      }
+    },
+    {
+      "id": "other_provider",
+      "type": "text",
+      "text": "Other Providers\n(External Plugins)",
+      "x": 350,
+      "y": 750,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "provider_plugin"
+      }
+    },
+    {
+      "id": "provisioner",
+      "type": "text",
+      "text": "provisioners/\nProvisioner Interface",
+      "x": 300,
+      "y": 600,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "provisioner"
+      }
+    },
+    {
+      "id": "registry",
+      "type": "text",
+      "text": "registry/\nTerraform Registry",
+      "x": 500,
+      "y": 200,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "registry"
+      }
+    },
+    {
+      "id": "cloud",
+      "type": "text",
+      "text": "cloud/\nTerraform Cloud",
+      "x": 500,
+      "y": 350,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "cloud"
+      }
+    },
+    {
+      "id": "diagnostics",
+      "type": "text",
+      "text": "tfdiags/\nDiagnostics",
+      "x": -300,
+      "y": 200,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "diagnostics"
+      }
+    },
+    {
+      "id": "logging",
+      "type": "text",
+      "text": "logging/\nStructured Logs",
+      "x": -300,
+      "y": 350,
+      "width": 200,
+      "height": 100,
+      "vv": {
+        "nodeType": "component",
+        "shape": "rectangle",
+        "component": "logging"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "fromNode": "main",
+      "toNode": "commands",
+      "vv": {
+        "component": "orchestrates",
+        "label": "routes"
+      }
+    },
+    {
+      "id": "edge_1",
+      "fromNode": "commands",
+      "toNode": "context",
+      "vv": {
+        "component": "orchestrates",
+        "label": "creates"
+      }
+    },
+    {
+      "id": "edge_2",
+      "fromNode": "commands",
+      "toNode": "plan",
+      "vv": {
+        "component": "uses",
+        "label": "reads/writes"
+      }
+    },
+    {
+      "id": "edge_3",
+      "fromNode": "context",
+      "toNode": "config_loader",
+      "vv": {
+        "component": "uses",
+        "label": "parses HCL"
+      }
+    },
+    {
+      "id": "edge_4",
+      "fromNode": "context",
+      "toNode": "lang",
+      "vv": {
+        "component": "evaluates",
+        "label": "evaluates"
+      }
+    },
+    {
+      "id": "edge_5",
+      "fromNode": "context",
+      "toNode": "state",
+      "vv": {
+        "component": "uses",
+        "label": "manages"
+      }
+    },
+    {
+      "id": "edge_6",
+      "fromNode": "context",
+      "toNode": "dag",
+      "vv": {
+        "component": "orchestrates",
+        "label": "builds & walks"
+      }
+    },
+    {
+      "id": "edge_7",
+      "fromNode": "state",
+      "toNode": "backend",
+      "vv": {
+        "component": "stores",
+        "label": "persists via"
+      }
+    },
+    {
+      "id": "edge_8",
+      "fromNode": "dag",
+      "toNode": "provider_interface",
+      "vv": {
+        "component": "orchestrates",
+        "label": "executes via"
+      }
+    },
+    {
+      "id": "edge_9",
+      "fromNode": "provider_interface",
+      "toNode": "aws_provider",
+      "vv": {
+        "component": "implements",
+        "label": "gRPC"
+      }
+    },
+    {
+      "id": "edge_10",
+      "fromNode": "provider_interface",
+      "toNode": "azure_provider",
+      "vv": {
+        "component": "implements",
+        "label": "gRPC"
+      }
+    },
+    {
+      "id": "edge_11",
+      "fromNode": "provider_interface",
+      "toNode": "other_provider",
+      "vv": {
+        "component": "implements",
+        "label": "gRPC"
+      }
+    },
+    {
+      "id": "edge_12",
+      "fromNode": "dag",
+      "toNode": "provisioner",
+      "vv": {
+        "component": "orchestrates",
+        "label": "executes"
+      }
+    },
+    {
+      "id": "edge_13",
+      "fromNode": "commands",
+      "toNode": "registry",
+      "vv": {
+        "component": "communicates",
+        "label": "downloads from"
+      }
+    },
+    {
+      "id": "edge_14",
+      "fromNode": "commands",
+      "toNode": "cloud",
+      "vv": {
+        "component": "communicates",
+        "label": "syncs with"
+      }
+    },
+    {
+      "id": "edge_15",
+      "fromNode": "backend",
+      "toNode": "cloud",
+      "vv": {
+        "component": "stores",
+        "label": "remote state"
+      }
+    },
+    {
+      "id": "edge_16",
+      "fromNode": "context",
+      "toNode": "diagnostics",
+      "vv": {
+        "component": "reports",
+        "label": "errors/warnings"
+      }
+    },
+    {
+      "id": "edge_17",
+      "fromNode": "context",
+      "toNode": "logging",
+      "vv": {
+        "component": "reports",
+        "label": "structured logs"
+      }
+    },
+    {
+      "id": "edge_18",
+      "fromNode": "config_loader",
+      "toNode": "diagnostics",
+      "vv": {
+        "component": "reports",
+        "label": "parse errors"
+      }
+    }
+  ]
+}

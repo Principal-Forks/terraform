@@ -1,0 +1,90 @@
+version: "1.0.0"
+name: "Terraform Core Architecture Library"
+
+nodeComponents:
+  # CLI Layer
+  cli_entry:
+    color: "1"
+    icon: "Terminal"
+  command:
+    color: "1"
+    icon: "Command"
+
+  # Core Engine
+  context:
+    color: "2"
+    icon: "Cpu"
+  dag:
+    color: "2"
+    icon: "Network"
+
+  # Configuration & Language
+  config_loader:
+    color: "3"
+    icon: "FileCode"
+  lang_evaluator:
+    color: "3"
+    icon: "Calculator"
+
+  # State Management
+  state:
+    color: "4"
+    icon: "Database"
+  backend:
+    color: "4"
+    icon: "HardDrive"
+
+  # Plans
+  plan:
+    color: "5"
+    icon: "FileText"
+
+  # Plugin System
+  provider_interface:
+    color: "6"
+    icon: "Plug"
+  provider_plugin:
+    color: "6"
+    icon: "Package"
+  provisioner:
+    color: "6"
+    icon: "Wrench"
+
+  # External Systems
+  registry:
+    color: "purple"
+    icon: "Cloud"
+  cloud:
+    color: "purple"
+    icon: "CloudCog"
+
+  # Supporting Systems
+  diagnostics:
+    color: "orange"
+    icon: "AlertCircle"
+  logging:
+    color: "orange"
+    icon: "FileText"
+
+edgeComponents:
+  orchestrates:
+    style: "solid"
+    color: "1"
+  uses:
+    style: "solid"
+    color: "4"
+  implements:
+    style: "dashed"
+    color: "6"
+  communicates:
+    style: "dotted"
+    color: "2"
+  stores:
+    style: "solid"
+    color: "4"
+  evaluates:
+    style: "dashed"
+    color: "3"
+  reports:
+    style: "dotted"
+    color: "orange"
