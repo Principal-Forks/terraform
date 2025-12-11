@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "Terraform Core Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -18,10 +18,9 @@
       "width": 200,
       "height": 100,
       "color": "#3B82F6",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "cli_entry"
+        "shape": "rectangle"
       }
     },
     {
@@ -33,10 +32,9 @@
       "width": 200,
       "height": 100,
       "color": "#60A5FA",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "command"
+        "shape": "rectangle"
       }
     },
     {
@@ -48,10 +46,9 @@
       "width": 200,
       "height": 100,
       "color": "#10B981",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "context"
+        "shape": "rectangle"
       }
     },
     {
@@ -63,10 +60,9 @@
       "width": 200,
       "height": 100,
       "color": "#F59E0B",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "config_loader"
+        "shape": "rectangle"
       }
     },
     {
@@ -78,10 +74,9 @@
       "width": 200,
       "height": 100,
       "color": "#FBBF24",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "lang_evaluator"
+        "shape": "rectangle"
       }
     },
     {
@@ -93,10 +88,9 @@
       "width": 200,
       "height": 100,
       "color": "#34D399",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "dag"
+        "shape": "rectangle"
       }
     },
     {
@@ -108,10 +102,9 @@
       "width": 200,
       "height": 100,
       "color": "#06B6D4",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "state"
+        "shape": "rectangle"
       }
     },
     {
@@ -123,10 +116,9 @@
       "width": 200,
       "height": 100,
       "color": "#22D3EE",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "backend"
+        "shape": "rectangle"
       }
     },
     {
@@ -138,10 +130,9 @@
       "width": 200,
       "height": 100,
       "color": "#8B5CF6",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "plan"
+        "shape": "rectangle"
       }
     },
     {
@@ -153,10 +144,9 @@
       "width": 200,
       "height": 100,
       "color": "#EC4899",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "provider_interface"
+        "shape": "rectangle"
       }
     },
     {
@@ -168,10 +158,9 @@
       "width": 200,
       "height": 100,
       "color": "#F472B6",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "provider_plugin"
+        "shape": "rectangle"
       }
     },
     {
@@ -183,10 +172,9 @@
       "width": 200,
       "height": 100,
       "color": "#F472B6",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "provider_plugin"
+        "shape": "rectangle"
       }
     },
     {
@@ -198,10 +186,9 @@
       "width": 200,
       "height": 100,
       "color": "#F472B6",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "provider_plugin"
+        "shape": "rectangle"
       }
     },
     {
@@ -213,10 +200,9 @@
       "width": 200,
       "height": 100,
       "color": "#FB7185",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "provisioner"
+        "shape": "rectangle"
       }
     },
     {
@@ -228,10 +214,9 @@
       "width": 200,
       "height": 100,
       "color": "#A855F7",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "registry"
+        "shape": "rectangle"
       }
     },
     {
@@ -243,10 +228,9 @@
       "width": 200,
       "height": 100,
       "color": "#C084FC",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "cloud"
+        "shape": "rectangle"
       }
     },
     {
@@ -258,10 +242,9 @@
       "width": 200,
       "height": 100,
       "color": "#F97316",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "diagnostics"
+        "shape": "rectangle"
       }
     },
     {
@@ -273,10 +256,9 @@
       "width": 200,
       "height": 100,
       "color": "#FB923C",
-      "vv": {
+      "pv": {
         "nodeType": "component",
-        "shape": "rectangle",
-        "component": "logging"
+        "shape": "rectangle"
       }
     }
   ],
@@ -286,9 +268,9 @@
       "fromNode": "main",
       "toNode": "commands",
       "color": "#3B82F6",
-      "vv": {
-        "component": "orchestrates",
-        "label": "routes"
+      "label": "routes",
+      "pv": {
+        "edgeType": "orchestrates"
       }
     },
     {
@@ -296,9 +278,9 @@
       "fromNode": "commands",
       "toNode": "context",
       "color": "#3B82F6",
-      "vv": {
-        "component": "orchestrates",
-        "label": "creates"
+      "label": "creates",
+      "pv": {
+        "edgeType": "orchestrates"
       }
     },
     {
@@ -306,9 +288,9 @@
       "fromNode": "commands",
       "toNode": "plan",
       "color": "#06B6D4",
-      "vv": {
-        "component": "uses",
-        "label": "reads/writes"
+      "label": "reads/writes",
+      "pv": {
+        "edgeType": "uses"
       }
     },
     {
@@ -316,9 +298,9 @@
       "fromNode": "context",
       "toNode": "config_loader",
       "color": "#06B6D4",
-      "vv": {
-        "component": "uses",
-        "label": "parses HCL"
+      "label": "parses HCL",
+      "pv": {
+        "edgeType": "uses"
       }
     },
     {
@@ -326,9 +308,9 @@
       "fromNode": "context",
       "toNode": "lang",
       "color": "#F59E0B",
-      "vv": {
-        "component": "evaluates",
-        "label": "evaluates"
+      "label": "evaluates",
+      "pv": {
+        "edgeType": "evaluates"
       }
     },
     {
@@ -336,9 +318,9 @@
       "fromNode": "context",
       "toNode": "state",
       "color": "#06B6D4",
-      "vv": {
-        "component": "uses",
-        "label": "manages"
+      "label": "manages",
+      "pv": {
+        "edgeType": "uses"
       }
     },
     {
@@ -346,9 +328,9 @@
       "fromNode": "context",
       "toNode": "dag",
       "color": "#3B82F6",
-      "vv": {
-        "component": "orchestrates",
-        "label": "builds & walks"
+      "label": "builds & walks",
+      "pv": {
+        "edgeType": "orchestrates"
       }
     },
     {
@@ -356,9 +338,9 @@
       "fromNode": "state",
       "toNode": "backend",
       "color": "#0891B2",
-      "vv": {
-        "component": "stores",
-        "label": "persists via"
+      "label": "persists via",
+      "pv": {
+        "edgeType": "stores"
       }
     },
     {
@@ -366,9 +348,9 @@
       "fromNode": "dag",
       "toNode": "provider_interface",
       "color": "#3B82F6",
-      "vv": {
-        "component": "orchestrates",
-        "label": "executes via"
+      "label": "executes via",
+      "pv": {
+        "edgeType": "orchestrates"
       }
     },
     {
@@ -376,9 +358,9 @@
       "fromNode": "provider_interface",
       "toNode": "aws_provider",
       "color": "#EC4899",
-      "vv": {
-        "component": "implements",
-        "label": "gRPC"
+      "label": "gRPC",
+      "pv": {
+        "edgeType": "implements"
       }
     },
     {
@@ -386,9 +368,9 @@
       "fromNode": "provider_interface",
       "toNode": "azure_provider",
       "color": "#EC4899",
-      "vv": {
-        "component": "implements",
-        "label": "gRPC"
+      "label": "gRPC",
+      "pv": {
+        "edgeType": "implements"
       }
     },
     {
@@ -396,9 +378,9 @@
       "fromNode": "provider_interface",
       "toNode": "other_provider",
       "color": "#EC4899",
-      "vv": {
-        "component": "implements",
-        "label": "gRPC"
+      "label": "gRPC",
+      "pv": {
+        "edgeType": "implements"
       }
     },
     {
@@ -406,9 +388,9 @@
       "fromNode": "dag",
       "toNode": "provisioner",
       "color": "#3B82F6",
-      "vv": {
-        "component": "orchestrates",
-        "label": "executes"
+      "label": "executes",
+      "pv": {
+        "edgeType": "orchestrates"
       }
     },
     {
@@ -416,9 +398,9 @@
       "fromNode": "commands",
       "toNode": "registry",
       "color": "#10B981",
-      "vv": {
-        "component": "communicates",
-        "label": "downloads from"
+      "label": "downloads from",
+      "pv": {
+        "edgeType": "communicates"
       }
     },
     {
@@ -426,9 +408,9 @@
       "fromNode": "commands",
       "toNode": "cloud",
       "color": "#10B981",
-      "vv": {
-        "component": "communicates",
-        "label": "syncs with"
+      "label": "syncs with",
+      "pv": {
+        "edgeType": "communicates"
       }
     },
     {
@@ -436,9 +418,9 @@
       "fromNode": "backend",
       "toNode": "cloud",
       "color": "#0891B2",
-      "vv": {
-        "component": "stores",
-        "label": "remote state"
+      "label": "remote state",
+      "pv": {
+        "edgeType": "stores"
       }
     },
     {
@@ -446,9 +428,9 @@
       "fromNode": "context",
       "toNode": "diagnostics",
       "color": "#F97316",
-      "vv": {
-        "component": "reports",
-        "label": "errors/warnings"
+      "label": "errors/warnings",
+      "pv": {
+        "edgeType": "reports"
       }
     },
     {
@@ -456,9 +438,9 @@
       "fromNode": "context",
       "toNode": "logging",
       "color": "#F97316",
-      "vv": {
-        "component": "reports",
-        "label": "structured logs"
+      "label": "structured logs",
+      "pv": {
+        "edgeType": "reports"
       }
     },
     {
@@ -466,9 +448,9 @@
       "fromNode": "config_loader",
       "toNode": "diagnostics",
       "color": "#F97316",
-      "vv": {
-        "component": "reports",
-        "label": "parse errors"
+      "label": "parse errors",
+      "pv": {
+        "edgeType": "reports"
       }
     }
   ]
