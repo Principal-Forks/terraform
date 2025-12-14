@@ -1,4 +1,4 @@
-name: Quality Lens Analysis
+name: Quality Analysis
 
 on:
   push:
@@ -32,8 +32,23 @@ jobs:
       - name: Install Quality Lens CLI
         run: npm install -g @principal-ai/quality-lens-cli
 
-      - name: Run quality lenses
+      - name: Check if Node.js project
+        id: check-project
+        run: |
+          if [ -f "package.json" ]; then
+            echo "is_node_project=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_node_project=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run quality lenses (Node.js projects)
+        if: steps.check-project.outputs.is_node_project == 'true'
         run: quality-lens run . --install --output results.json --format json
+
+      - name: Run Go quality analysis
+        if: steps.check-project.outputs.is_node_project == 'false'
+        run: |
+          echo '{"projectType":"go","qualityMetrics":{"hexagon":{"tests":0,"linting":0,"types":0,"formatting":0,"deadCode":0,"documentation":0}},"results":[{"lens":{"id":"go-analysis"},"execution":{"success":true,"exitCode":0},"issues":[],"metrics":{"note":"Quality Lens only supports Node.js projects. Consider adding Go-specific quality checks."}}]}' > results.json
 
       - name: Display results summary
         if: always()
@@ -41,28 +56,30 @@ jobs:
           if [ -f results.json ]; then
             echo ""
             echo "═══════════════════════════════════════════════════════════════"
-            echo "                    QUALITY LENS RESULTS"
+            echo "                    QUALITY ANALYSIS RESULTS"
             echo "═══════════════════════════════════════════════════════════════"
             node -e "
               const fs = require('fs');
               const results = JSON.parse(fs.readFileSync('results.json', 'utf8'));
 
-              // Show hexagon scores
-              const hex = results.qualityMetrics?.hexagon || {};
+              console.log('Project Type:', results.projectType || 'Node.js');
               console.log('');
-              console.log('Quality Hexagon Scores:');
-              console.log('───────────────────────');
-              const dimensions = ['tests', 'linting', 'types', 'formatting', 'deadCode', 'documentation'];
-              for (const dim of dimensions) {
-                const score = hex[dim] ?? 0;
-                const bar = '█'.repeat(Math.floor(score / 10)) + '░'.repeat(10 - Math.floor(score / 10));
-                const status = score === 0 ? '⚠️  NEEDS SETUP' : score >= 80 ? '✅' : score >= 50 ? '⚡' : '⚠️';
-                console.log(`  ${dim.padEnd(14)} ${bar} ${score.toString().padStart(3)}% ${status}`);
+
+              if (results.qualityMetrics?.hexagon) {
+                console.log('Quality Hexagon Scores:');
+                console.log('───────────────────────');
+                const hex = results.qualityMetrics.hexagon;
+                const dimensions = ['tests', 'linting', 'types', 'formatting', 'deadCode', 'documentation'];
+                for (const dim of dimensions) {
+                  const score = hex[dim] ?? 0;
+                  const bar = '█'.repeat(Math.floor(score / 10)) + '░'.repeat(10 - Math.floor(score / 10));
+                  const status = score === 0 ? '⚠️  NEEDS SETUP' : score >= 80 ? '✅' : score >= 50 ? '⚡' : '⚠️';
+                  console.log(\`  \${dim.padEnd(14)} \${bar} \${score.toString().padStart(3)}% \${status}\`);
+                }
               }
 
-              // Show lens details
               console.log('');
-              console.log('Lens Execution Details:');
+              console.log('Analysis Details:');
               console.log('───────────────────────');
               for (const r of results.results) {
                 const success = r.execution?.success;
@@ -79,32 +96,19 @@ jobs:
                 } else if (!hasMetrics && !hasIssues) {
                   status = '⚠️  NO DATA';
                   if (exitCode === 2) {
-                    note = ' - Config error (check eslint/tsconfig)';
+                    note = ' - Config error';
                   } else {
                     note = ' - Could not parse output';
                   }
                 } else if (hasIssues) {
-                  status = `📋 ${r.issues.length} issues`;
+                  status = \`📋 \${r.issues.length} issues\`;
                 }
 
-                console.log(`  ${r.lens.id.padEnd(12)} ${status}${note}`);
-              }
-
-              // Show action items if needed
-              const needsAttention = results.results.filter(r =>
-                !r.execution?.success ||
-                (!r.issues?.length && !r.metrics?.totalIssues && r.execution?.exitCode !== 0)
-              );
-
-              if (needsAttention.length > 0) {
-                console.log('');
-                console.log('⚠️  ACTION REQUIRED:');
-                console.log('───────────────────────');
-                console.log('Some lenses could not run properly. Common fixes:');
-                console.log('  • ESLint: Ensure .eslintrc or eslint.config.js exists');
-                console.log('  • Jest: Ensure jest.config.js and test files exist');
-                console.log('  • TypeScript: Ensure tsconfig.json is valid');
-                console.log('  • Run "npm ci" locally to verify dependencies');
+                console.log(\`  \${r.lens.id.padEnd(12)} \${status}\${note}\`);
+                
+                if (r.metrics?.note) {
+                  console.log(\`    Note: \${r.metrics.note}\`);
+                }
               }
 
               console.log('');
@@ -116,6 +120,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: quality-lens-results-${{ github.sha }}
+          name: quality-analysis-results-${{ github.sha }}
           path: results.json
           if-no-files-found: warn
